@@ -500,9 +500,9 @@ public:
  void displaymap() {
   map<string, values>::iterator it;
   for (it = symtable.begin(); it != symtable.end(); it++) {
-   cout << "Key: " << it->first << endl;
-   cout << "Address: " << it->second.address << endl;
-   cout << "Type: " << it->second.type << endl;
+   cout << "the key = " << it->first << endl;
+   cout << "the address is " << it->second.address << endl;
+   cout << "the type is" << it->second.type << endl;
   }
  }
  map<string, values> getTable() {
@@ -563,30 +563,30 @@ void output(vector<string> tList) {
   }
  }
  outfile << ss.str();
- outfile << "\nINSTRUCTION TABLE (without nil oprnds)" << endl;
+ outfile << "\ninstruction table (no nil operands)" << endl;
  map<int, inst>::iterator it;
  for (it = instr_table.begin(); it != instr_table.end(); it++) {
   if (it->second.oprnd == 0) {
    continue;
   } else {
-   outfile << "Address: " << it->second.address << endl;
-   outfile << "Op: " << it->second.op << endl;
-   outfile << "Operand: " << it->second.oprnd << endl;
+   outfile << "the address is " << it->second.address << endl;
+   outfile << "the Op is " << it->second.op << endl;
+   outfile << "the operand is " << it->second.oprnd << endl;
   }
  }
- outfile << "\nSYMBOL TABLE" << endl;
+ outfile << "\nsymbol table" << endl;
  map<string, values> tempMap = st.getTable();
  map<string, values>::iterator itr;
  for (itr = tempMap.begin(); itr != tempMap.end(); itr++) {
   if (itr->first == "identifier") {
    continue;
   } else {
-   outfile << "Key: " << itr->first << endl;
-   outfile << "Address: " << itr->second.address << endl;
-   outfile << "Type: " << itr->second.type << endl;
+   outfile << "the key = " << itr->first << endl;
+   outfile << "the address is " << itr->second.address << endl;
+   outfile << "the type is " << itr->second.type << endl;
   }
  }
- outfile << "\nASSEMBLY INSTRUCTIONS" << endl;
+ outfile << "\nassembly instructions" << endl;
  for (int i = 0; i < 1000; i++) {
   if (ins_output[i] != "") {
    outfile << ins_output[i] << endl;
@@ -722,7 +722,7 @@ string readFile(string filename) {
   }
   infile.close();
  } else {
-  cout << "Error: Unable to open file" << endl;
+  cout << "Error: Unable to open the file" << endl;
  }
  return text;
 }
