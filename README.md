@@ -1,5 +1,5 @@
 # Project 3
 
 How to run code<br>
-Run the following command on a linux a machine:
+  - type the following on a linux machine command line:
   - "sh execute.sh"
