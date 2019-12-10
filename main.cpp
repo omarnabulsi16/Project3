@@ -28,7 +28,7 @@ public:
   return cstate.top();
  }
  void printcstates() {
-  cout << "Length of cstates: " << cstate.size() << endl;
+  cout << "Length of current state: " << cstate.size() << endl;
   while (!cstate.empty()) {
    cout << cstate.top() << endl;
    cstate.pop();
