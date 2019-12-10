@@ -1,0 +1,6 @@
+int x,max,total;
+x=1;
+total=0;
+while (x<max) {
+    total=total+x;
+}
