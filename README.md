@@ -1,1 +1,5 @@
-# SyntaxAnalyzer
+# Project 3
+
+How to run code
+Run the following command on a linux a machine:
+  - "sh execute.sh"
