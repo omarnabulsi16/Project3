@@ -1,5 +1,3 @@
-rm *.out
+g++ main.cpp -o test.out
 
-g++ main.cpp -o run.out
-
-./run.out
+./test.out
